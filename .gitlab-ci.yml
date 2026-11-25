@@ -1,0 +1,66 @@
+image: docker:latest
+services:
+  - docker:dind
+
+stages:
+  - build
+  - catapult
+
+variables:
+  CONTAINER_TEST_IMAGE: $CI_PROJECT_PATH:$CI_COMMIT_REF_NAME
+  CONTAINER_RELEASE_IMAGE: $CI_PROJECT_PATH:latest
+  # versione di selezioni-online da estendere: vuota = "ref" di upstream.json (sovrascrivibile dalle variabili CI/CD)
+  SELEZIONI_ONLINE_REF: ""
+
+# Il sorgente si prepara nel Dockerfile: clone di selezioni-online, personalizzazioni Lincei (overrides/, merge/,
+# replace.json) e build Angular, quindi non serve la cache di node_modules.
+
+#Ad ogni nuovo commit sul master viene fatta la push sul docker registry.
+docker-build-push-master:
+  stage: build
+  script:
+    - docker build --build-arg SELEZIONI_ONLINE_REF=$SELEZIONI_ONLINE_REF -t $CONTAINER_TEST_IMAGE .
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker tag $CONTAINER_TEST_IMAGE $CI_REGISTRY/$CONTAINER_RELEASE_IMAGE
+    - docker push $CI_REGISTRY/$CONTAINER_RELEASE_IMAGE
+  only:
+    - master
+
+#Ad ogni nuovo tag viene fatta la push sul docker hub.
+docker-build-push-hub:
+  stage: build
+  script:
+    - docker build --build-arg SELEZIONI_ONLINE_REF=$SELEZIONI_ONLINE_REF -t $CI_PROJECT_NAME:$CI_COMMIT_REF_NAME .
+    - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+    - docker tag $CI_PROJECT_NAME:$CI_COMMIT_REF_NAME $DOCKER_HUB_ORGANIZATION/$CI_PROJECT_NAME:$CI_COMMIT_REF_NAME
+    - docker tag $CI_PROJECT_NAME:$CI_COMMIT_REF_NAME $DOCKER_HUB_ORGANIZATION/$CI_PROJECT_NAME:latest
+    - docker push $DOCKER_HUB_ORGANIZATION/$CI_PROJECT_NAME:$CI_COMMIT_REF_NAME
+    - docker push $DOCKER_HUB_ORGANIZATION/$CI_PROJECT_NAME:latest
+  only:
+    - tags
+
+#Ad ogni nuovo commit sul branch viene fatta la push sul docker registry.
+docker-build-push-branches:
+  stage: build
+  script:
+    - docker build --build-arg SELEZIONI_ONLINE_REF=$SELEZIONI_ONLINE_REF -t $CONTAINER_TEST_IMAGE .
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker tag $CONTAINER_TEST_IMAGE $CI_REGISTRY/$CONTAINER_TEST_IMAGE
+    - docker push $CI_REGISTRY/$CONTAINER_TEST_IMAGE
+  except:
+    - tags
+    - master
+
+#Aggiorno il container con l'immagine docker creata.
+catapult-deploy-image:
+  stage: catapult
+  dependencies:
+    - docker-build-push-branches
+    - docker-build-push-master
+  before_script:
+    - apk add --update curl && rm -rf /var/cache/apk/*
+  script:
+    - >
+      curl --fail -s -X POST $CATAPULT_URL -H 'Content-type:application/json' --data '{"id":"'"$CI_PROJECT_PATH:$CI_COMMIT_REF_NAME"'", "git":true}'
+  except:
+    - tags

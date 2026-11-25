@@ -1,0 +1,89 @@
+{
+  "header": {
+    "title": "Selezioni online Lincei",
+    "company": {
+      "title": "Accademia Nazionale dei Lincei",
+      "short": "Lincei",
+      "url": "https://www.lincei.it"
+    }
+  },
+  "home": {
+    "title": "Selezioni online Accademia Nazionale dei Lincei",
+    "subtitle": "Sistema di presentazione delle candidature online di Borse di Studio e Premi dell'Accademia Nazionale dei Lincei."
+  },
+  "layout": {
+    "calls_subtitle": "Bandi per Borse di Studio e Premi dell'Accademia Nazionale dei Lincei."
+  },
+  "footer": {
+    "copyright": {
+      "large": "© Accademia Nazionale dei Lincei",
+      "slim": "© Lincei"
+    }
+  },
+  "contacts": {
+    "subtitle": "Accademia Nazionale dei Lincei",
+    "helpdesk": {
+      "alert": "Si consiglia vivamente di procedere alla compilazione e all'invio della domanda online evitando i giorni immediatamente precedenti la scadenza del termine previsto dal bando, per non incorrere in possibili inconvenienti derivanti da un eventuale sovraccarico del sistema."
+    }
+  },
+  "push": {
+    "subtitle": "Installa Selezioni online Lincei sul tuo dispositivo e ricevi notifiche su nuovi bandi, scadenze, convocazioni e comunicazioni.",
+    "install": {
+      "info": "Aggiungi Selezioni online Lincei al tuo dispositivo per aprirla come un'app e ricevere le notifiche."
+    }
+  },
+  "signin": {
+    "concorsi": "Per partecipare alle selezioni online dell'<b>Accademia Nazionale dei Lincei</b> occorre accedere all'area utenti inserendo Nome utente e password scelti in fase di registrazione.",
+    "candidaticnr": ""
+  },
+  "label": {
+    "jconon_lincei_materie_call_elenco_discipline_umanistiche": "Discipline umanistiche",
+    "jconon_lincei_materie_call_elenco_discipline_scientifiche": "Discipline scientifiche",
+    "jconon_call_eta_massima": "Età massima",
+    "home": {
+      "title": {
+        "h2": "Selezioni online Accademia Nazionale dei Lincei",
+        "h3": "Sistema di presentazione delle candidature online di Borse di Studio e Premi dell'Accademia Nazionale dei Lincei."
+      }
+    },
+    "jconon_call_disciplina": "Discipline",
+    "jconon_call_disciplina.DS": "Scientifiche",
+    "jconon_call_disciplina.DM": "Umanistiche",
+    "jconon_call_disciplina.DMS": "Scientifiche/Umanistiche",
+    "jconon_call_descrizione_ridotta": "Titolo breve bando",
+    "jconon_call": {
+      "descrizione_ridotta": "Titolo breve bando"
+    },
+    "jconon_lincei_allegati_titolo": "Titolo",
+    "jconon_lincei_allegati_link": "Link esterno (in alternativa al file, per i documenti troppo pesanti)",
+    "jconon_application_tutor_text": "Dati anagrafici del tutor",
+    "jconon_application_tutor_cognome": "Cognome del tutor",
+    "jconon_application_tutor_nome": "Nome del tutor",
+    "jconon_application_tutor_data_nascita": "Data di nascita del tutor",
+    "jconon_application_tutor_luogo_nascita": "Luogo di nascita del tutor",
+    "jconon_application_tutor_codice_fiscale": "Codice fiscale del tutor",
+    "jconon_application_tutor_qualifica": "Qualifica del tutor",
+    "jconon_application_tutor_ente": "Ente di appartenenza del tutor",
+    "jconon_application_tutor_email": "Email del tutor",
+    "jconon_application_link_cloud_privato": "Link esterno"
+  },
+  "message": {
+    "error": {
+      "eta.max": "La domanda non può essere confermata: alla scadenza del bando il candidato supererebbe l'età massima prevista.",
+      "confirm.incomplete": "Si é verificato un errore in fase di conferma della domanda. Se il problema persiste contattare la Segreteria dell'Accademia."
+    }
+  },
+  "F:jconon_call:premi": "Premi",
+  "F:jconon_call:borse": "Borse",
+  "user": {
+    "information": {
+      "detail": "Le informazioni personali possono essere variate in qualsiasi momento, se l'utenza non proviene da un account SPID. La variazione delle informazioni non si riflette sulle domande già inviate o in stato provvisorio: in tal caso una variazione dei dati anagrafici va comunicata tempestivamente alla Segreteria dell'Accademia (segreteria@lincei.it)"
+    }
+  },
+  "call_manage": {
+    "confirm_publish": "Pubblicare il bando? Il bando sarà visibile ai candidati."
+  },
+  "text": {
+    "jconon_application_cloud_privato": "Necessità di utilizzare un cloud privato, senza password e sempre accessibile, per inviare i documenti:"
+  }
+}

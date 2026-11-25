@@ -1,0 +1,83 @@
+{
+  "header": {
+    "title": "Online Applications Lincei",
+    "company": {
+      "title": "Accademia Nazionale dei Lincei",
+      "short": "Lincei",
+      "url": "https://www.lincei.it"
+    }
+  },
+  "home": {
+    "title": "Online Applications – Accademia Nazionale dei Lincei",
+    "subtitle": "Online application system for Scholarships and Awards of the Accademia Nazionale dei Lincei."
+  },
+  "layout": {
+    "calls_subtitle": "Calls for Scholarships and Awards of the Accademia Nazionale dei Lincei."
+  },
+  "footer": {
+    "copyright": {
+      "large": "© Accademia Nazionale dei Lincei",
+      "slim": "© Lincei"
+    }
+  },
+  "contacts": {
+    "subtitle": "Accademia Nazionale dei Lincei",
+    "helpdesk": {
+      "alert": "We strongly recommend that you fill in and send the application online, avoiding the days immediately preceding the deadline, so as not to run into problems caused by a possible system overload."
+    }
+  },
+  "push": {
+    "subtitle": "Install Online Applications Lincei on your device and receive notifications about new calls, deadlines, convocations and communications.",
+    "install": {
+      "info": "Add Online Applications Lincei to your device to open it as an app and receive notifications."
+    }
+  },
+  "signin": {
+    "concorsi": "To take part in the online selections of the <b>Accademia Nazionale dei Lincei</b> you must sign in with the user name and password chosen during registration.",
+    "candidaticnr": ""
+  },
+  "label": {
+    "jconon_lincei_materie_call_elenco_discipline_umanistiche": "Humanities",
+    "jconon_lincei_materie_call_elenco_discipline_scientifiche": "Sciences",
+    "jconon_call_eta_massima": "Max age",
+    "jconon_call_disciplina": "Disciplines",
+    "jconon_call_disciplina.DS": "Sciences",
+    "jconon_call_disciplina.DM": "Humanities",
+    "jconon_call_disciplina.DMS": "Sciences/Humanities",
+    "jconon_call_descrizione_ridotta": "Short call title",
+    "jconon_call": {
+      "descrizione_ridotta": "Short call title"
+    },
+    "jconon_lincei_allegati_titolo": "Title",
+    "jconon_lincei_allegati_link": "External link (instead of the file, for documents that are too large)",
+    "jconon_application_tutor_text": "Tutor personal data",
+    "jconon_application_tutor_cognome": "Tutor surname",
+    "jconon_application_tutor_nome": "Tutor name",
+    "jconon_application_tutor_data_nascita": "Tutor date of birth",
+    "jconon_application_tutor_luogo_nascita": "Tutor place of birth",
+    "jconon_application_tutor_codice_fiscale": "Tutor tax code",
+    "jconon_application_tutor_qualifica": "Tutor position",
+    "jconon_application_tutor_ente": "Tutor institution",
+    "jconon_application_tutor_email": "Tutor email",
+    "jconon_application_link_cloud_privato": "External link"
+  },
+  "message": {
+    "error": {
+      "eta.max": "The application cannot be confirmed: at the deadline the candidate would exceed the maximum age.",
+      "confirm.incomplete": "An error has occurred while confirming the application. If the problem persists, please contact the Secretariat of the Academy."
+    }
+  },
+  "F:jconon_call:premi": "Awards",
+  "F:jconon_call:borse": "Scholarships",
+  "user": {
+    "information": {
+      "detail": "Personal information can be changed at any time, unless the account comes from SPID. Changes are not reflected in applications already sent or in draft: in that case please notify the Secretariat of the Academy promptly (segreteria@lincei.it)"
+    }
+  },
+  "call_manage": {
+    "confirm_publish": "Publish the call? The call will be visible to applicants."
+  },
+  "text": {
+    "jconon_application_cloud_privato": "Need to use a private cloud, without password and always accessible, to send the documents:"
+  }
+}

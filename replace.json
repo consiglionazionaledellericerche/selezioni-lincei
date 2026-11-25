@@ -1,0 +1,17 @@
+[
+  {
+    "file": "src/index.html",
+    "search": "<meta name=\"theme-color\" content=\"#0066cc\">",
+    "replace": "<meta name=\"theme-color\" content=\"#707E2A\">"
+  },
+  {
+    "file": "src/index.html",
+    "search": "content=\"Selezioni CNR\"",
+    "replace": "content=\"Selezioni Lincei\""
+  },
+  {
+    "file": "proxy.conf.js",
+    "search": "http://localhost:5555",
+    "replace": "http://localhost:8081"
+  }
+]

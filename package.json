@@ -1,0 +1,13 @@
+{
+  "name": "selezioni-lincei",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Selezioni online dell'Accademia Nazionale dei Lincei: personalizzazione di selezioni-online",
+  "scripts": {
+    "overlay": "node scripts/overlay.mjs",
+    "overlay:local": "node scripts/overlay.mjs --upstream ../selezioni-online",
+    "install:build": "cd .build && npm ci --legacy-peer-deps --no-audit --no-fund",
+    "start": "npm run overlay:local && npm run install:build && cd .build && npx ng serve",
+    "build": "npm run overlay && npm run install:build && cd .build && npx ng build --configuration production --output-hashing=all"
+  }
+}

@@ -1,0 +1,23 @@
+// Regole aggiuntive Lincei
+// intestazione nel verde dell'Accademia (#707E2A, più scuro nella barra superiore)
+.it-header-center-wrapper, .it-header-navbar-wrapper {
+  background-color: #707E2A;
+}
+.it-header-slim-wrapper {
+  background-color: #5a6622;
+}
+// lo stemma a colori su un disco bianco, leggibile sul verde dell'intestazione
+.brand-logo {
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  object-fit: contain;
+}
+
+// piè di pagina nei verdi dell'Accademia invece del blu scuro di Bootstrap Italia
+.it-footer .it-footer-main.bg-dark {
+  background-color: #3f4818 !important;
+}
+.it-footer .it-footer-small-prints {
+  background-color: #2f3612;
+}
